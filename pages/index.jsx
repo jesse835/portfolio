@@ -1,7 +1,10 @@
 import React from 'react'
 import { Button, makeStyles } from '@material-ui/core'
 
+import MainBar from '../src/components/MainBar.tsx'
+
 import Head from 'next/head'
+import Intro from '../src/components/Intro.tsx'
 
 const useStyles = makeStyles({
   container: {
@@ -22,14 +25,10 @@ export default function Home() {
         <title>My portfolio</title>
         <meta name="description" content="Content of my site" />
       </Head>
-      <div className={style.container}>
-        <div>Test home page</div>
-        <br />
 
-        <Button variant="contained" color="primary">
-          Hello World
-        </Button>
-      </div>
+      <MainBar>
+        <Intro />
+      </MainBar>
     </main>
   )
 }
